@@ -3,6 +3,7 @@ package client;
 import command.*;
 import command.util.InsertUtil;
 import command.util.UpdateUtil;
+import gui.ConnectorFrame;
 import person.Person;
 
 import java.io.IOException;
@@ -36,6 +37,8 @@ public class Processor {
         System.out.println("Студент: Максим Беляков\n");
         System.out.println("Группа: Р3131\n\n");
         System.out.println("----------------------------------------\n");
+
+        ConnectorFrame connectorFrame = new ConnectorFrame();
 
         try (DatagramChannel datagramChannel = DatagramChannel.open()) {
             this.setDatagramChannel(datagramChannel);
